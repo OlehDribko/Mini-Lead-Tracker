@@ -210,7 +210,20 @@ npm run start --workspace=apps/frontend -- --port 3001
 
 ## What I did not have time to finish and how I would improve it
 
-- Add automated e2e tests (backend API + frontend critical flows) to reduce manual verification effort.
-- Add CI pipeline for lint/build/test checks on each pull request.
-- Improve database indexing strategy for larger datasets (search + sorting paths).
-- Add lightweight request logging/monitoring configuration for easier runtime diagnostics.
+If I had more time, I would improve the project in the following areas:
+
+- Strengthen backend validation: add server-side trimming, stricter DTO validation rules, and better normalization for optional fields to prevent whitespace-only values and improve input consistency.
+
+- Add authentication and personalization: implement JWT-based authentication with protected routes, user accounts, and user-specific lead ownership so each user manages only their own CRM data.
+
+- Add authorization rules: basic access control for leads and comments to ensure users can only update/delete records they own.
+
+- Improve frontend forms: stronger client-side validation, better inline field-level errors, disabled submit states during requests, and optimistic UI updates for a smoother UX.
+
+- Add automated tests: unit tests for backend services/controllers and frontend critical components.
+
+- Add E2E testing: verification of create/edit/delete lead flows, comments, filters, pagination, and API integration.
+
+- Improve CRM features: lead activity history, status timeline, lead priority, tags, and better reporting around lead value progression.
+
+- Improve production readiness: structured logging, rate limiting, health checks, CI/CD pipeline, and deployment-ready environment configuration.
